@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eufloria – dekoracje ślubne i szkolenia florystyczne</title>
+<meta name="description" content="Eufloria Flower – najpiękniejsze dekoracje z kwiatów na ślub i wesele. Eufloria Academy – szkolenia i ebooki florystyczne.">
+<link rel="icon" href="https://i.ibb.co/MD2z7nGP/869827759-2949207728777969-5835398468240843291-n.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fefefe;--blue:#063881;--soft:#eef2f9;--line:rgba(6,56,129,.18);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;--script:'Great Vibes','Brush Script MT',cursive;--slow:1.8s cubic-bezier(.2,.6,.2,1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--blue);font:300 17px/1.75 var(--sans)}
+img{max-width:100%;display:block}
+a{color:inherit}
+p{margin:0 0 16px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;margin:0}
+h2{font-size:clamp(34px,5vw,56px);margin-bottom:20px}
+h3{font-size:26px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.btn{display:inline-block;font:500 14px var(--sans);letter-spacing:.06em;padding:14px 30px;border:1px solid var(--blue);background:var(--blue);color:var(--bg);text-decoration:none;cursor:pointer;transition:background .6s,color .6s}
+.btn:hover{background:transparent;color:var(--blue)}
+.btn.ghost{background:transparent;color:var(--blue)}
+.btn.ghost:hover{background:var(--blue);color:var(--bg)}
+.btn.light{background:var(--bg);color:var(--blue);border-color:var(--bg)}
+.btn.light:hover{background:transparent;color:var(--bg)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+header{position:fixed;inset:env(safe-area-inset-top,0px) 0 auto 0;z-index:20;background:rgba(254,254,254,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:rgba(254,254,254,.95);z-index:21}
+nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logos{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logos img{height:46px;width:46px;object-fit:cover;border-radius:50%}
+.logos span{font:400 38px/1 var(--script);padding-left:6px;white-space:nowrap}
+.menu{display:flex;gap:28px;align-items:center}
+.menu>a,.dd>a{text-decoration:none;font-size:15px}
+.menu>a:hover,.dd>a:hover{opacity:.6}
+.dd{position:relative;padding:26px 0}
+.dd div{position:absolute;top:100%;left:-16px;background:var(--bg);border:1px solid var(--line);min-width:220px;padding:10px 0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .6s}
+.dd:hover div,.dd:focus-within div{opacity:1;visibility:visible;transform:none}
+.dd div a{display:block;padding:8px 20px;text-decoration:none;font-size:15px}
+.dd div a:hover{background:var(--soft)}
+.menu .btn{padding:10px 20px;color:var(--bg)}
+.menu .btn:hover{color:var(--blue)}
+.burger{display:none;background:none;border:0;font-size:28px;color:var(--blue);cursor:pointer}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:flex-end;position:relative;color:var(--bg);padding:140px 0 90px;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,56,129,.25),rgba(6,56,129,.8)),url(https://i.ibb.co/PGZgH1F1/472791823-913953984059451-5017509637884280421-n.jpg) center/cover;animation:zoom 24s ease-out both}
+@keyframes zoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero .tag{font:400 clamp(28px,4vw,44px)/1 var(--script);margin-bottom:14px}
+.hero h1{font-size:clamp(44px,7.5vw,100px);max-width:13ch}
+.hero p{max-width:540px;font-size:19px;margin:22px 0 34px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .btn.ghost{color:var(--bg);border-color:var(--bg)}
+.hero .btn.ghost:hover{background:var(--bg);color:var(--blue)}
+.hero .tag,.hero h1,.hero p,.hero .cta{animation:rise 2.2s cubic-bezier(.2,.6,.2,1) both}
+.hero h1{animation-delay:.4s}.hero p{animation-delay:.9s}.hero .cta{animation-delay:1.3s}
+@keyframes rise{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity var(--slow),transform var(--slow)}
+.reveal.in{opacity:1;transform:none}
+/* bands */
+.band{padding:56px 0 0}
+.band .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+.band h2{margin:0;font-size:clamp(30px,4.2vw,50px)}
+.band h2 b{font-weight:600;font-style:italic}
+.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding:0 6px}
+.strip div{aspect-ratio:2/3;overflow:hidden}
+.strip img{width:100%;height:100%;object-fit:cover;transition:transform 2.4s cubic-bezier(.2,.6,.2,1)}
+.strip div:hover img{transform:scale(1.07)}
+.more{text-align:center;padding:48px 0 0}
+/* about */
+#o-nas{background:var(--soft);margin-top:96px}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:start}
+.about .imgs{display:grid;gap:14px}
+.about .imgs img{width:100%;object-fit:cover}
+.about .imgs img:first-child{aspect-ratio:4/5}.about .imgs img:last-child{aspect-ratio:3/2;width:70%;margin-left:auto}
+.spec{list-style:none;padding:0;margin:24px 0 32px;border-top:1px solid var(--line)}
+.spec li{padding:12px 0;border-bottom:1px solid var(--line)}
+.faq{margin-top:56px;max-width:820px}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{font:500 24px var(--serif);cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";transition:transform .6s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:12px 0 0;max-width:680px}
+/* offer */
+.lead{max-width:640px;margin-bottom:48px}
+.offer{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--soft);color:var(--bg);display:flex;align-items:flex-end}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 2.4s cubic-bezier(.2,.6,.2,1)}
+.card:hover img{transform:scale(1.07)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(6,56,129,.9))}
+.card div{position:relative;z-index:1;padding:22px}
+.card p{margin:8px 0 0;font-size:15px;line-height:1.55}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:72px;counter-reset:s}
+.steps div{border-top:1px solid var(--blue);padding-top:18px;counter-increment:s}
+.steps h3::before{content:counter(s) ". ";font-style:italic}
+.steps p{font-size:15.5px;margin-top:8px}
+/* gallery */
+#realizacje{background:var(--soft)}
+.gal{columns:4 220px;column-gap:14px}
+.gal button{display:block;width:100%;margin:0 0 14px;padding:0;border:0;background:none;cursor:zoom-in;overflow:hidden;break-inside:avoid}
+.gal img{width:100%;transition:transform 2.2s cubic-bezier(.2,.6,.2,1)}
+.gal button:hover img{transform:scale(1.05)}
+.bridge{margin-top:56px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:36px}
+.bridge p{font:italic 400 clamp(24px,3vw,34px)/1.25 var(--serif);margin:0;max-width:640px}
+/* academy */
+.acad-head{display:flex;gap:28px;align-items:center;margin-bottom:24px;flex-wrap:wrap}
+.acad-head img{width:96px;height:96px;object-fit:cover;border-radius:50%}
+.acad-head h2{margin:0}
+.sub{font:500 30px var(--serif);margin:56px 0 22px}
+.prods{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.prod{border:1px solid var(--line);display:flex;flex-direction:column;background:var(--bg)}
+.ph{aspect-ratio:4/3;background:repeating-linear-gradient(45deg,var(--soft),var(--soft) 14px,#e4eaf5 14px,#e4eaf5 28px);display:grid;place-items:center;font-size:14px}
+.prod .body{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.prod .meta{font-size:14px;opacity:.75}
+.prod .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px}
+.price{font:600 26px var(--serif)}
+.prod .btn{padding:10px 20px}
+/* contact */
+#kontakt{background:var(--blue);color:var(--bg);text-align:center}
+#kontakt .tag{font:400 44px/1 var(--script)}
+#kontakt .tel{display:block;font:500 clamp(38px,7vw,84px)/1.1 var(--serif);text-decoration:none;margin:18px 0 28px}
+#kontakt p{max-width:560px;margin:0 auto 28px}
+#kontakt .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+#kontakt .btn.ghost{color:var(--bg);border-color:var(--bg)}
+#kontakt .btn.ghost:hover{background:var(--bg);color:var(--blue)}
+footer{background:var(--blue);color:var(--bg);border-top:1px solid rgba(254,254,254,.25);padding:56px 0 28px;font-size:15px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+footer h4{font:500 22px var(--serif);margin:0 0 12px}
+footer a{display:block;text-decoration:none;opacity:.85;margin-bottom:6px}
+footer a:hover{opacity:1}
+footer .fl{display:flex;gap:10px;align-items:center;margin-bottom:12px}
+footer .fl img{width:54px;height:54px;border-radius:50%;object-fit:cover}
+footer .fl span{font:400 36px/1 var(--script)}
+.copy{margin-top:36px;padding-top:18px;border-top:1px solid rgba(254,254,254,.2);font-size:14px;opacity:.8}
+/* modals */
+.modal{position:fixed;inset:0;z-index:50;background:rgba(6,56,129,.85);display:none;place-items:center;padding:24px}
+.modal.open{display:grid}
+.box{background:var(--bg);max-width:460px;width:100%;padding:36px;position:relative}
+.box p{margin:12px 0 22px}
+.x{position:absolute;top:10px;right:16px;background:none;border:0;font-size:30px;color:var(--blue);cursor:pointer}
+.box input{width:100%;font:300 16px var(--sans);padding:14px;border:1px solid var(--line);color:var(--blue);background:transparent;margin-bottom:12px}
+#lb img{max-height:88vh;max-width:92vw;object-fit:contain}
+#lb .x{color:var(--bg);position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:20px}
+@media(max-width:900px){
+.offer,.steps{grid-template-columns:repeat(2,1fr)}.prods{grid-template-columns:1fr}.about{grid-template-columns:1fr;gap:36px}.fgrid{grid-template-columns:1fr 1fr}
+.strip{grid-template-columns:repeat(5,42vw);overflow-x:auto}
+.burger{display:block}.menu{position:absolute;top:76px;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:20px 24px 28px;gap:16px;border-bottom:1px solid var(--line);display:none}.menu.open{display:flex}
+.dd{padding:0}.dd div{position:static;opacity:1;visibility:visible;transform:none;border:0;padding:6px 0 0 14px}.dd div a{padding:4px 0}
+section{padding:68px 0}#o-nas{margin-top:68px}.logos span{font-size:32px}
+}
+@media(max-width:480px){.offer,.steps,.fgrid{grid-template-columns:1fr}.logos img+img{display:none}}
+@media(prefers-reduced-motion:reduce){*,.hero::before{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="logos" href="#top" aria-label="Eufloria – strona główna">
+    <img src="https://i.ibb.co/MD2z7nGP/869827759-2949207728777969-5835398468240843291-n.jpg" alt="Logo Eufloria Flower">
+    <img src="https://i.ibb.co/Xff0BngB/867122431-1835328537491369-3596366130986863184-n.jpg" alt="Logo Eufloria Academy">
+    <span>Eufloria</span>
+  </a>
+  <button class="burger" aria-label="Menu" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
+  <div class="menu">
+    <a href="#o-nas">O nas</a>
+    <div class="dd"><a href="#realizacje">Realizacje ▾</a><div><a href="#slub">Ślub i wesele</a><a href="#bukiety">Bukiety i wiązanki</a><a href="#kosciol">Kościoły i sale</a><a href="#realizacje">Cała galeria</a></div></div>
+    <a href="#oferta">Oferta</a>
+    <a href="#academy">Szkolenia</a>
+    <a href="#ebooki">Ebooki</a>
+    <a class="btn" href="#kontakt">Kontakt</a>
+  </div>
+</nav></div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <div class="tag">Eufloria Flower</div>
+  <h1>Dołącz do grona szczęśliwych par</h1>
+  <p>Najpiękniejsze dekoracje z kwiatów na Twój ślub i wesele. Bukiety, wiązanki, kościoły, sale weselne, samochody, prezenty. Spełniamy florystyczne marzenia.</p>
+  <div class="cta"><a class="btn light" href="#kontakt">Zapytaj o termin</a><a class="btn ghost" href="#realizacje">Zobacz realizacje</a></div>
+</div></div>
+
+<div class="band" id="slub"><div class="wrap reveal"><h2>Stworzymy Twój wymarzony <b>ślub i wesele</b></h2></div><div class="strip reveal" data-g="5,6,7,0,1"></div></div>
+<div class="band" id="bukiety"><div class="wrap reveal"><h2>Bukiety i wiązanki <b>na każdą okazję</b></h2></div><div class="strip reveal" data-g="2,3,4,8,9"></div></div>
+<div class="band" id="kosciol"><div class="wrap reveal"><h2>Dekoracje <b>kościołów i sal weselnych</b></h2></div><div class="strip reveal" data-g="10,11,12,13,14"></div>
+  <div class="more reveal"><a class="btn ghost" href="#realizacje">Więcej naszych prac</a></div></div>
+
+<section id="o-nas"><div class="wrap">
+  <div class="about">
+    <div class="reveal">
+      <h2>Kim jesteśmy?</h2>
+      <p>Eufloria Flower to pracownia florystyczna, która tworzy dekoracje ślubne i weselne od pierwszego bukietu po ostatni stół na sali. Pracujemy na starannie wyselekcjonowanych kwiatach, a każdy projekt dopasowujemy do stylu pary młodej, pory roku i wnętrza.</p>
+      <p>[Placeholder: historia firmy, np. od kiedy działacie, skąd pomysł na pracownię, ile ślubów zrealizowaliście.]</p>
+      <p>Z czasem do pracowni dołączyła Eufloria Academy. Dzielimy się tym, czego nauczyliśmy się przy setkach realizacji, żeby każdy mógł rozwijać własne umiejętności florystyczne: od pierwszego bukietu po profesjonalne dekoracje.</p>
+      <h3 style="margin-top:32px">Specjalizacja naszej pracowni</h3>
+      <ul class="spec">
+        <li>Oprawa florystyczna ślubów i wesel</li>
+        <li>Bukiety ślubne, butonierki i wiązanki</li>
+        <li>Dekoracje kościołów, plenerów i sal weselnych</li>
+        <li>Ozdoby samochodów i prezenty dla gości</li>
+        <li>Szkolenia i ebooki dla florystów oraz pasjonatów</li>
+      </ul>
+      <a class="btn ghost" href="https://www.facebook.com/Kwiatynaslubiwesele" target="_blank" rel="noopener">Obserwuj nas na Facebooku</a>
+    </div>
+    <div class="imgs reveal"><img data-g1="5" alt="Dekoracja ślubna Eufloria" loading="lazy"><img data-g1="16" alt="Kompozycja kwiatowa Eufloria" loading="lazy"></div>
+  </div>
+</div></section>
+
+<section id="oferta"><div class="wrap">
+  <div class="reveal"><h2>Nasza oferta</h2>
+  <p class="lead">Dekoracje ślubne projektujemy tak, aby tworzyły spójną całość. Wybierzcie pojedyncze usługi albo kompleksową oprawę wesela.</p></div>
+  <div class="offer reveal" id="offer"></div>
+  <div class="steps reveal">
+    <div><h3>Rozmowa</h3><p>Opowiadacie o ślubie, kolorach, miejscu i budżecie. Możecie przesłać inspiracje.</p></div>
+    <div><h3>Projekt i wycena</h3><p>Przygotowujemy propozycję kompozycji i jasną wycenę dopasowaną do Waszych potrzeb.</p></div>
+    <div><h3>Przygotowanie</h3><p>Zamawiamy kwiaty, dobieramy dodatki i przygotowujemy wszystko na kilka dni przed ślubem.</p></div>
+    <div><h3>Realizacja</h3><p>W dniu ślubu dowozimy bukiety i wykonujemy dekoracje, abyście mogli spokojnie cieszyć się dniem.</p></div>
+  </div>
+</div></section>
+
+<section id="realizacje"><div class="wrap">
+  <div class="reveal"><h2>Realizacje</h2>
+  <p class="lead">Wybrane dekoracje z naszych ślubów i wesel. Kliknij zdjęcie, aby je powiększyć.</p></div>
+  <div class="gal reveal" id="gal"></div>
+  <div class="bridge reveal">
+    <p>Każdą z tych kompozycji można nauczyć się wykonywać. Sprawdź szkolenia Eufloria Academy.</p>
+    <a class="btn" href="#academy">Zobacz szkolenia</a>
+  </div>
+</div></section>
+
+<section id="academy"><div class="wrap">
+  <div class="acad-head reveal">
+    <img src="https://i.ibb.co/Xff0BngB/867122431-1835328537491369-3596366130986863184-n.jpg" alt="Eufloria Academy">
+    <h2>Eufloria Academy</h2>
+  </div>
+  <p class="lead reveal">Praktyczna wiedza florystyczna od osób, które na co dzień robią dekoracje ślubne. Szkolenia na żywo i online oraz ebooki do nauki we własnym tempie. [Placeholder: dla kogo są szkolenia, poziom zaawansowania, co zapewniacie uczestnikom.]</p>
+  <h3 class="sub" style="margin-top:32px">Szkolenia</h3>
+  <div class="prods reveal" id="courses"></div>
+  <h3 class="sub" id="ebooki">Ebooki</h3>
+  <div class="prods reveal" id="ebooks"></div>
+</div></section>
+
+<section id="kontakt"><div class="wrap reveal">
+  <div class="tag">Porozmawiajmy</div>
+  <a class="tel" href="tel:+48535665558">+48 535 665 558</a>
+  <p>Zadzwoń lub napisz do nas na Facebooku. Podaj datę i miejsce ślubu, a wrócimy z propozycją dekoracji.</p>
+  <div class="cta"><a class="btn light" href="tel:+48535665558">Zadzwoń</a><a class="btn ghost" href="https://www.facebook.com/Kwiatynaslubiwesele" target="_blank" rel="noopener">Napisz na Facebooku</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="fl"><img src="https://i.ibb.co/MD2z7nGP/869827759-2949207728777969-5835398468240843291-n.jpg" alt=""><span>Eufloria</span></div><p>Dekoracje ślubne i szkolenia florystyczne.</p></div>
+    <div><h4>Informacje</h4><a href="#o-nas">O nas</a><a href="#kontakt">Kontakt</a><a href="#">[Polityka prywatności]</a><a href="#">[Regulamin]</a></div>
+    <div><h4>Sprawdź</h4><a href="#oferta">Oferta</a><a href="#realizacje">Realizacje</a><a href="#academy">Szkolenia</a><a href="#ebooki">Ebooki</a></div>
+    <div><h4>Znajdź nas</h4><a href="https://www.facebook.com/Kwiatynaslubiwesele" target="_blank" rel="noopener">Facebook</a><a href="tel:+48535665558">+48 535 665 558</a></div>
+  </div>
+  <div class="copy">© 2026 Eufloria Flower &amp; Eufloria Academy</div>
+</div></footer>
+
+<div class="modal" id="buy" role="dialog" aria-modal="true"><div class="box">
+  <button class="x" aria-label="Zamknij" onclick="closeM('buy')">×</button>
+  <h3 id="buyT">Produkt</h3>
+  <p>Płatności online zostaną uruchomione wkrótce. Zostaw swój e-mail, a damy znać, gdy zakup będzie możliwy.</p>
+  <form onsubmit="event.preventDefault();this.innerHTML='<p>Dziękujemy, odezwiemy się!</p>'"><input required type="email" placeholder="Twój e-mail" aria-label="E-mail"><button class="btn" type="submit">Powiadom mnie</button></form>
+</div></div>
+<div class="modal" id="lb" onclick="closeM('lb')"><button class="x" aria-label="Zamknij">×</button><img alt="Realizacja Eufloria" id="lbi"></div>
+
+<script>
+const G=["https://i.ibb.co/Hp2mPdNK/506359269-18394211434112138-4349126769111697599-n.jpg","https://i.ibb.co/jX2Cm0L/506397429-18394211443112138-6998711260226610580-n.jpg","https://i.ibb.co/SwCDLw3x/508257312-18394211425112138-6513312808105898627-n.jpg","https://i.ibb.co/Wvmg96Tx/508281844-18394211452112138-5492764077406646308-n.jpg","https://i.ibb.co/KzXPYwtv/508282623-18394211377112138-8627204278832778281-n.jpg","https://i.ibb.co/DgPnVq3Z/621741651-18426643582112138-834082341696431579-n.jpg","https://i.ibb.co/0VQShCnw/621706856-18426643612112138-3702115983218444916-n.jpg","https://i.ibb.co/Swf95x9V/621968459-18426643603112138-5243112915677749485-n.jpg","https://i.ibb.co/C3VVhTdG/508262907-18394211368112138-8876031488739559839-n.jpg","https://i.ibb.co/H328hYb/502473214-18392162998112138-7171407086901537348-n.jpg","https://i.ibb.co/TMW3Bvts/500086591-18391136479112138-9103234303861873343-n.jpg","https://i.ibb.co/pB4p73ph/500895232-18391136470112138-8222666518465026209-n.jpg","https://i.ibb.co/XrrMscNk/500776998-18391136461112138-3376620147517817827-n.jpg","https://i.ibb.co/Xxk4YnZc/500690224-18391136452112138-187019813480279872-n.jpg","https://i.ibb.co/cSvwhx2g/501395150-18391136443112138-5446013427676981114-n.jpg","https://i.ibb.co/XkyhFqpT/888132220-1421114556676722-5512876067875558680-n.jpg","https://i.ibb.co/FLTdH5RF/892710761-1421114590010052-7306030006594767588-n.jpg","https://i.ibb.co/qY6kNmjJ/890422365-1421114540010057-5572672380232111581-n.jpg"];
+document.querySelectorAll('.strip').forEach(s=>s.innerHTML=s.dataset.g.split(',').map(i=>`<div><img src="${G[i]}" alt="Realizacja Eufloria" loading="lazy"></div>`).join(''));
+document.querySelectorAll('[data-g1]').forEach(i=>i.src=G[i.dataset.g1]);
+const O=[["Bukiety ślubne",2,"Bukiet panny młodej, butonierka, bukiet do rzucania. [Placeholder: opis]"],["Kościół",10,"Ołtarz, ławki, wejście i dekoracja nawy. [Placeholder: opis]"],["Sala weselna",12,"Stół pary młodej, stoły gości, wejście. [Placeholder: opis]"],["Samochód i dodatki",15,"Ozdoba auta, wiązanki, prezenty dla gości i rodziców."]];
+document.getElementById('offer').innerHTML=O.map(o=>`<a class="card" href="#kontakt" style="text-decoration:none"><img src="${G[o[1]]}" alt="${o[0]}" loading="lazy"><div><h3>${o[0]}</h3><p>${o[2]}</p></div></a>`).join('');
+document.getElementById('gal').innerHTML=G.map((s,i)=>`<button onclick="lb(${i})" aria-label="Powiększ realizację ${i+1}"><img src="${s}" alt="Realizacja dekoracji ślubnej ${i+1}" loading="lazy"></button>`).join('');
+const P=(t,m,p,txt)=>`<article class="prod"><div class="ph">Placeholder: zdjęcie</div><div class="body"><h3>${t}</h3><div class="meta">${m}</div><p style="margin:4px 0 0;font-size:15px">Placeholder: krótki opis zawartości i dla kogo jest ${txt}.</p><div class="row"><span class="price">${p} zł</span><button class="btn" data-t="${t}">Kup teraz</button></div></div></article>`;
+document.getElementById('courses').innerHTML=[["Szkolenie: bukiet ślubny","Stacjonarnie · 1 dzień"],["Szkolenie: dekoracje sali","Stacjonarnie · 2 dni"],["Kurs online: florystyka ślubna","Online · dostęp 12 miesięcy"]].map(x=>P(x[0],x[1],'000','to szkolenie')).join('');
+document.getElementById('ebooks').innerHTML=[["Ebook: bukiet krok po kroku","PDF · 00 stron"],["Ebook: dekoracje kościoła","PDF · 00 stron"],["Ebook: kolory i style ślubne","PDF · 00 stron"]].map(x=>P(x[0],x[1],'00','ten ebook')).join('');
+function openM(id){document.getElementById(id).classList.add('open')}
+function closeM(id){document.getElementById(id).classList.remove('open')}
+function lb(i){document.getElementById('lbi').src=G[i];openM('lb')}
+document.addEventListener('click',e=>{const b=e.target.closest('.prod .btn');if(b){document.getElementById('buyT').textContent=b.dataset.t;openM('buy')}
+if(e.target.closest('.menu a'))document.querySelector('.menu').classList.remove('open');
+if(e.target.id==='buy')closeM('buy')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeM('buy');closeM('lb')}});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
